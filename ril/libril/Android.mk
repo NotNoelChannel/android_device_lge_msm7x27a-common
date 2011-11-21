@@ -1,5 +1,7 @@
 # Copyright 2006 The Android Open Source Project
 
+ifeq ($(BOARD_PROVIDES_LIBRIL),true)
+
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
@@ -28,3 +30,4 @@ LOCAL_MODULE := libril
 LOCAL_CLANG := false
 
 include $(BUILD_SHARED_LIBRARY)
+endif # BOARD_PROVIDES_LIBRIL
