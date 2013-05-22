@@ -17,6 +17,10 @@ LOCAL_SHARED_LIBRARIES := \
 # Disable usage of Clang Toolchain here
 LOCAL_CLANG := false
 
+# temporary hack for broken vendor rils
+LOCAL_WHOLE_STATIC_LIBRARIES := \
+	librilutils_static
+
 LOCAL_CFLAGS := -DRIL_SHLIB
 
 LOCAL_MODULE := rild
