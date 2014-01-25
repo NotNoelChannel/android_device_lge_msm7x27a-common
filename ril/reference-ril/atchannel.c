@@ -37,9 +37,9 @@
 
 #include <telephony/ril_log.h>
 
-#ifdef HAVE_ANDROID_OS
+#ifdef HAVE_PTHREAD_COND_TIMEDWAIT_RELATIVE
 #define USE_NP 1
-#endif /* HAVE_ANDROID_OS */
+#endif /* HAVE_PTHREAD_COND_TIMEDWAIT_RELATIVE */
 
 
 #define NUM_ELEMS(x) (sizeof(x)/sizeof(x[0]))
