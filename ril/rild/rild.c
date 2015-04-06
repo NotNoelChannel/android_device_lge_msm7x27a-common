@@ -35,6 +35,8 @@
 #include <cutils/sockets.h>
 #include <sys/capability.h>
 #include <sys/prctl.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 
 #include <private/android_filesystem_config.h>
 #include "hardware/qemu_pipe.h"
