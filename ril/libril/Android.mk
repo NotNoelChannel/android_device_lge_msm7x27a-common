@@ -16,6 +16,8 @@ LOCAL_SHARED_LIBRARIES := \
     libcutils \
     libhardware_legacy
 
+LOCAL_C_INCLUDES += $(TARGET_OUT_HEADERS)/librilutils
+
 # Disable usage of Clang Toolchain here
 LOCAL_CLANG := false
 
