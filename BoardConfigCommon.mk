@@ -26,6 +26,7 @@
 COMMON_DEVICE_PATH := device/lge/msm7x27a-common
 
 # Common device board elements
+include $(DEVICE_PATH)/PlatformConfig.mk
 include $(DEVICE_PATH)/board/*.mk
 
 # Common device vendor board
