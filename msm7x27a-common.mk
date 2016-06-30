@@ -1,4 +1,4 @@
-# Copyright (C) 2015-2016 The CyanogenMod Project
+# Copyright (C) 2013-2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,14 +18,14 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Device specific overlays
 DEVICE_PACKAGE_OVERLAYS += device/lge/$(LGE_MSM7X27A_DEVICE)/overlay
 
-# Device product elements
-include $(LOCAL_PATH)/product/*.mk
+# Product common configurations
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Dalvik heap configurations
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
-# Product common configurations
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+# Device product elements
+include $(LOCAL_PATH)/product/*.mk
 
 # Common vendor product configurations
 $(call inherit-product, vendor/lge/msm7x27a-common/msm7x27a-common-vendor.mk)

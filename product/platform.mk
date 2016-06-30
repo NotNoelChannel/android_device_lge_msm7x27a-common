@@ -1,7 +1,3 @@
-# Platform permissions
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
-
 # Platform common configuration
 PRODUCT_COPY_FILES += \
     device/lge/msm7x27a-common/rootdir/root/fstab.lge.shared:root/fstab.lge.shared

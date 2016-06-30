@@ -1,5 +1,8 @@
-# Platform
+# Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM7X27A
+
+# Vendor platform
+BOARD_VENDOR := lge
 
 # Images
 TARGET_NO_BOOTLOADER := true
