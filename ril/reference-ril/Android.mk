@@ -1,5 +1,7 @@
 # Copyright 2006 The Android Open Source Project
 
+ifeq ($(BOARD_PROVIDES_LIBREFERENCE_RIL),true)
+
 # XXX using libutils for simulator build only...
 #
 LOCAL_PATH:= $(call my-dir)
@@ -40,3 +42,4 @@ LOCAL_CFLAGS += -DRIL_SHLIB
 LOCAL_MODULE := libreference-ril
 
 include $(BUILD_SHARED_LIBRARY)
+endif # BOARD_PROVIDES_LIBREFERENCE_RIL
