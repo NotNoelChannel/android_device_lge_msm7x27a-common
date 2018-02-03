@@ -177,4 +177,4 @@ endif
 
 # Set Device in init based on baseband
 TARGET_INIT_VENDOR_LIB := libinit_$(LGE_MSM7X27A_PRODUCT)
-TARGET_LIBINIT_DEFINES_FILE := device/lge/vee3/init/$(LGE_MSM7X27A_PRODUCT)/init_$(LGE_MSM7X27A_PRODUCT).cpp
+TARGET_LIBINIT_DEFINES_FILE := device/lge/vee3/init/init_$(LGE_MSM7X27A_PRODUCT).cpp
