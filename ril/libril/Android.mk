@@ -16,10 +16,6 @@ LOCAL_SHARED_LIBRARIES := \
     libcutils \
     libhardware_legacy
 
-LOCAL_C_INCLUDES += external/nanopb-c
-LOCAL_C_INCLUDES += $(LOCAL_PATH)/../include
-LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/../include
-
 # Disable usage of Clang Toolchain here
 LOCAL_CLANG := false
 
@@ -28,6 +24,10 @@ LOCAL_CFLAGS := -DRIL_VARIANT_LEGACY
 ifeq ($(TARGET_RIL_SUPPORT_SEEK),true)
     LOCAL_CFLAGS += -DRIL_SUPPORTS_SEEK
 endif
+
+LOCAL_C_INCLUDES += external/nanopb-c
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/../include
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/../include
 
 LOCAL_MODULE := libril
 
