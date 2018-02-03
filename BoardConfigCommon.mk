@@ -164,3 +164,7 @@ ifeq ($(LGE_MSM7X27A_GENERATION),1)
   PRODUCT_DEX_PREOPT_DEFAULT_FLAGS := --compiler-filter=interpret-only
   $(call add-product-dex-preopt-module-config,services,--compiler-filter=space)
 endif
+
+# Set Device in init based on baseband
+TARGET_INIT_VENDOR_LIB := libinit_$(LGE_MSM7X27A_PRODUCT)
+TARGET_LIBINIT_DEFINES_FILE := device/lge/vee3/init/init_$(LGE_MSM7X27A_PRODUCT).cpp
