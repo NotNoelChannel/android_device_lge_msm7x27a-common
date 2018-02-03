@@ -16,7 +16,9 @@ LOCAL_SHARED_LIBRARIES := \
     libcutils \
     libhardware_legacy
 
-LOCAL_C_INCLUDES += $(TARGET_OUT_HEADERS)/librilutils
+LOCAL_C_INCLUDES += external/nanopb-c
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/../include
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/../include
 
 # Disable usage of Clang Toolchain here
 LOCAL_CLANG := false

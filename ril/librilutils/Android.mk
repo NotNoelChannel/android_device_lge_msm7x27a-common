@@ -8,14 +8,13 @@ LOCAL_SRC_FILES := \
     record_stream.c \
     proto/sap-api.proto
 
-LOCAL_C_INCLUDES += external/nanopb-c/
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/../include
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/../include
 
 LOCAL_PROTOC_OPTIMIZE_TYPE := nanopb-c-enable_malloc
 
 # Disable usage of Clang Toolchain here
 LOCAL_CLANG := false
-
-LOCAL_CFLAGS :=
 
 LOCAL_MODULE := librilutils
 
@@ -30,14 +29,13 @@ LOCAL_SRC_FILES:= \
     record_stream.c \
     proto/sap-api.proto
 
-LOCAL_C_INCLUDES += external/nanopb-c/
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/../include
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/../include
 
 LOCAL_PROTOC_OPTIMIZE_TYPE := nanopb-c-enable_malloc
 
 # Disable usage of Clang Toolchain here
 LOCAL_CLANG := false
-
-LOCAL_CFLAGS :=
 
 LOCAL_MODULE := librilutils_static
 

@@ -40,8 +40,6 @@ LOCAL_SHARED_LIBRARIES := \
 # Disable usage of Clang Toolchain here
 LOCAL_CLANG := false
 
-LOCAL_CFLAGS :=
-
 LOCAL_MODULE := radiooptions
 LOCAL_MODULE_TAGS := debug
 
