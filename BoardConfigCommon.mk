@@ -22,23 +22,6 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 
-ifeq ($(LGE_MSM7X27A_DEVICE),e610)
-  LGE_MSM7X27A_GENERATION := 1
-  LGE_MSM7X27A_PRODUCT := m4
-endif
-ifeq ($(LGE_MSM7X27A_DEVICE),p700)
-  LGE_MSM7X27A_GENERATION := 1
-  LGE_MSM7X27A_PRODUCT := u0
-endif
-ifeq ($(LGE_MSM7X27A_DEVICE),v1)
-  LGE_MSM7X27A_GENERATION := 2
-  LGE_MSM7X27A_PRODUCT := v1
-endif
-ifeq ($(LGE_MSM7X27A_DEVICE),vee3)
-  LGE_MSM7X27A_GENERATION := 2
-  LGE_MSM7X27A_PRODUCT := vee3
-endif
-
 # inherit from the proprietary version
 include vendor/lge/msm7x27a-common/BoardConfigVendor.mk
 

@@ -12,23 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq ($(LGE_MSM7X27A_DEVICE),e610)
-  LGE_MSM7X27A_GENERATION := 1
-  LGE_MSM7X27A_PRODUCT := m4
-endif
-ifeq ($(LGE_MSM7X27A_DEVICE),p700)
-  LGE_MSM7X27A_GENERATION := 1
-  LGE_MSM7X27A_PRODUCT := u0
-endif
-ifeq ($(LGE_MSM7X27A_DEVICE),v1)
-  LGE_MSM7X27A_GENERATION := 2
-  LGE_MSM7X27A_PRODUCT := v1
-endif
-ifeq ($(LGE_MSM7X27A_DEVICE),vee3)
-  LGE_MSM7X27A_GENERATION := 2
-  LGE_MSM7X27A_PRODUCT := vee3
-endif
-
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 $(call inherit-product, device/lge/msm7x27a-common/prebuilt/prebuilt.mk)
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
