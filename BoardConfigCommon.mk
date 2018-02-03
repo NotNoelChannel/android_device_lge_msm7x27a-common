@@ -160,7 +160,7 @@ TARGET_RIL_VARIANT := legacy
 TARGET_RIL_SUPPORT_SEEK := true
 
 # Only Interpret the system apps due to low space partitions
-ifeq ($(LGE_MSM7X27A_DEVICE),1)
+ifeq ($(LGE_MSM7X27A_GENERATION),1)
   PRODUCT_DEX_PREOPT_DEFAULT_FLAGS := --compiler-filter=interpret-only
   $(call add-product-dex-preopt-module-config,services,--compiler-filter=space)
 endif

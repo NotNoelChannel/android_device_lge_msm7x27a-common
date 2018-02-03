@@ -21,7 +21,7 @@ DEVICE_PACKAGE_OVERLAYS += device/lge/msm7x27a-common/overlay
 
 DEVICE_PACKAGE_OVERLAYS += device/lge/$(LGE_MSM7X27A_DEVICE)/overlay
 
-ifeq ($(LGE_MSM7X27A_DEVICE),1)
+ifeq ($(LGE_MSM7X27A_GENERATION),1)
 TARGET_BOOTANIMATION_HALF_RES := true
 endif
 
@@ -72,7 +72,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/$(LGE_MSM7X27A_DEVICE)/rootdir/system/usr/keylayout/$(LGE_MSM7X27A_PRODUCT)_keypad.kl:system/usr/keylayout/$(LGE_MSM7X27A_PRODUCT)_keypad.kl \
 
-ifeq ($(LGE_MSM7X27A_DEVICE),1)
+ifeq ($(LGE_MSM7X27A_GENERATION),1)
 PRODUCT_COPY_FILES += \
     device/lge/msm7x27a-common/recovery/root/sbin/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
 endif
@@ -143,7 +143,7 @@ PRODUCT_PACKAGES += \
     lights.msm7x27a
 
 # HWComposer
-ifeq ($(LGE_MSM7X27A_DEVICE),1)
+ifeq ($(LGE_MSM7X27A_GENERATION),1)
 PRODUCT_PACKAGES += \
     hwcomposer.msm7x27a
 endif
@@ -263,7 +263,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api="1"
 
 # ART
-ifeq ($(LGE_MSM7X27A_DEVICE),1)
+ifeq ($(LGE_MSM7X27A_GENERATION),1)
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-filter="balanced" \
     dalvik.vm.image-dex2oat-filter="speed"
