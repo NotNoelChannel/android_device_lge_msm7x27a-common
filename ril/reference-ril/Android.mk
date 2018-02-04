@@ -1,5 +1,7 @@
 # Copyright 2006 The Android Open Source Project
 
+ifeq ($(BOARD_PROVIDES_LIBREFERENCE_RIL),true)
+
 # XXX using libutils for simulator build only...
 #
 LOCAL_PATH:= $(call my-dir)
@@ -20,7 +22,7 @@ LOCAL_CLANG := false
 # for asprinf
 LOCAL_CFLAGS := -D_GNU_SOURCE
 
-ifeq ($(TARGET_RIL_VARIANT),legacy)
+ifeq ($(TARGET_RIL_VARIANT_LEGACY),true)
     LOCAL_CFLAGS += -DRIL_VARIANT_LEGACY
 endif
 
@@ -51,3 +53,4 @@ else
 
     include $(BUILD_EXECUTABLE)
 endif
+endif # BOARD_PROVIDES_LIBREFERENCE_RIL
