@@ -74,12 +74,12 @@ PRODUCT_COPY_FILES += \
     device/lge/msm7x27a-common/rootdir/system/etc/gen$(LGE_MSM7X27A_GENERATION)_media_profiles.xml:system/etc/media_profiles.xml
 
 PRODUCT_COPY_FILES += \
-    device/lge/$(LGE_MSM7X27A_DEVICE)/rootdir/root/fstab.$(LGE_MSM7X27A_PRODUCT):root/fstab.$(LGE_MSM7X27A_PRODUCT) \
-    device/lge/$(LGE_MSM7X27A_DEVICE)/rootdir/root/init.$(LGE_MSM7X27A_PRODUCT).rc:root/init.$(LGE_MSM7X27A_PRODUCT).rc \
-    device/lge/$(LGE_MSM7X27A_DEVICE)/rootdir/root/ueventd.$(LGE_MSM7X27A_PRODUCT).rc:root/ueventd.$(LGE_MSM7X27A_PRODUCT).rc
+    device/lge/$(LGE_MSM7X27A_DEVICE)/rootdir/root/fstab.$(BOARD_VENDOR_PLATFORM):root/fstab.$(BOARD_VENDOR_PLATFORM) \
+    device/lge/$(LGE_MSM7X27A_DEVICE)/rootdir/root/init.$(BOARD_VENDOR_PLATFORM).rc:root/init.$(BOARD_VENDOR_PLATFORM).rc \
+    device/lge/$(LGE_MSM7X27A_DEVICE)/rootdir/root/ueventd.$(BOARD_VENDOR_PLATFORM).rc:root/ueventd.$(BOARD_VENDOR_PLATFORM).rc
 
 PRODUCT_COPY_FILES += \
-    device/lge/$(LGE_MSM7X27A_DEVICE)/rootdir/system/usr/keylayout/$(LGE_MSM7X27A_PRODUCT)_keypad.kl:system/usr/keylayout/$(LGE_MSM7X27A_PRODUCT)_keypad.kl \
+    device/lge/$(LGE_MSM7X27A_DEVICE)/rootdir/system/usr/keylayout/$(BOARD_VENDOR_PLATFORM)_keypad.kl:system/usr/keylayout/$(BOARD_VENDOR_PLATFORM)_keypad.kl \
 
 ifeq ($(LGE_MSM7X27A_GENERATION),1)
 PRODUCT_COPY_FILES += \

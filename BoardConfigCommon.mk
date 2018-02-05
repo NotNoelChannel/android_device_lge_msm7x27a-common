@@ -60,7 +60,7 @@ TARGET_KERNEL_SOURCE := kernel/lge/msm7x27a-common
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x1200000
 BOARD_KERNEL_BASE := 0x00200000
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_CMDLINE := androidboot.hardware=$(LGE_MSM7X27A_PRODUCT) androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := androidboot.hardware=$(BOARD_VENDOR_PLATFORM) androidboot.selinux=permissive
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
@@ -111,7 +111,7 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += device/lge/msm7x27a-common/sepolicy
 
 # Recovery FSTAB
-TARGET_RECOVERY_FSTAB := device/lge/$(LGE_MSM7X27A_DEVICE)/rootdir/root/fstab.$(LGE_MSM7X27A_PRODUCT)
+TARGET_RECOVERY_FSTAB := device/lge/$(LGE_MSM7X27A_DEVICE)/rootdir/root/fstab.$(BOARD_VENDOR_PLATFORM)
 
 # BT Include
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/msm7x27a-common/bluetooth
@@ -177,5 +177,5 @@ ifeq ($(LGE_MSM7X27A_GENERATION),1)
 endif
 
 # Set Device in init based on baseband
-TARGET_INIT_VENDOR_LIB := libinit_$(LGE_MSM7X27A_PRODUCT)
-TARGET_LIBINIT_DEFINES_FILE := device/lge/vee3/init/init_$(LGE_MSM7X27A_PRODUCT).cpp
+TARGET_INIT_VENDOR_LIB := libinit_$(BOARD_VENDOR_PLATFORM)
+TARGET_LIBINIT_DEFINES_FILE := device/lge/vee3/init/init_$(BOARD_VENDOR_PLATFORM).cpp
