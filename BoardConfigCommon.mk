@@ -97,6 +97,8 @@ USE_DEVICE_SPECIFIC_GPS := true
 DEVICE_SPECIFIC_GPS_PATH := device/lge/msm7x27a-common/gps
 USE_DEVICE_SPECIFIC_DISPLAY := true
 DEVICE_SPECIFIC_DISPLAY_PATH := device/lge/msm7x27a-common/display
+USE_DEVICE_SPECIFIC_MEDIA := true
+DEVICE_SPECIFIC_MEDIA_PATH := device/lge/msm7x27a-common/media
 
 # Light
 TARGET_PROVIDES_LIBLIGHT := true
