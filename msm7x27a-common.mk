@@ -71,7 +71,7 @@ PRODUCT_COPY_FILES += \
 endif
 
 PRODUCT_COPY_FILES += \
-    device/lge/msm7x27a-common/rootdir/system/etc/gen$(LGE_MSM7X27A_GENERATION)_media_profiles.xml:system/etc/media_profiles.xml
+    device/lge/msm7x27a-common/rootdir/system/etc/media_profiles_gen$(LGE_MSM7X27A_GENERATION).xml:system/etc/media_profiles.xml
 
 PRODUCT_COPY_FILES += \
     device/lge/$(LGE_MSM7X27A_DEVICE)/rootdir/root/fstab.$(BOARD_VENDOR_PLATFORM):root/fstab.$(BOARD_VENDOR_PLATFORM) \
