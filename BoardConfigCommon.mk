@@ -95,6 +95,8 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 DEVICE_SPECIFIC_CAMERA_PATH := device/lge/msm7x27a-common/camera
 USE_DEVICE_SPECIFIC_GPS := true
 DEVICE_SPECIFIC_GPS_PATH := device/lge/msm7x27a-common/gps
+USE_DEVICE_SPECIFIC_DISPLAY := true
+DEVICE_SPECIFIC_DISPLAY_PATH := device/lge/msm7x27a-common/display
 
 # Light
 TARGET_PROVIDES_LIBLIGHT := true

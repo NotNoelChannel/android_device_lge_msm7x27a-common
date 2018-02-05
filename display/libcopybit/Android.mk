@@ -35,7 +35,7 @@ ifeq ($(TARGET_USES_C2D_COMPOSITION),true)
     include $(BUILD_SHARED_LIBRARY)
 else
     ifneq ($(TARGET_BOARD_PLATFORM),msm7630)
-    ifneq (,$(filter $(MSM7K_BOARD_PLATFORMS),$(TARGET_BOARD_PLATFORM)))
+    ifeq ($(call is-vendor-board-platform,QCOM),true)
             LOCAL_CFLAGS += -DCOPYBIT_MSM7K=1
             LOCAL_SRC_FILES := software_converter.cpp copybit.cpp
             include $(BUILD_SHARED_LIBRARY)
