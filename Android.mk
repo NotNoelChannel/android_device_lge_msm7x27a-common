@@ -12,6 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifneq ($(filter e610 p700 v1 vee3,$(TARGET_DEVICE)),)
+ifneq ($(filter e610 p700 v1 vee3 e0,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(call my-dir))
 endif
