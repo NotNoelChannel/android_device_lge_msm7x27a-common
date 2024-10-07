@@ -23,7 +23,7 @@
 # against the traditional rules of inheritance).
 
 # Common device path
-COMMON_DEVICE_PATH := device/lge/msm7x27a-common
+COMMON_DEVICE_PATH := device/lge/e0-common
 
 # Common device board elements
 include $(COMMON_DEVICE_PATH)/PlatformConfig.mk

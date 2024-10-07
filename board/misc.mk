@@ -18,11 +18,9 @@ TARGET_NO_ADAPTIVE_PLAYBACK := true
 USE_MINIKIN := true
 
 # Enable dex-preoptimization to speed up first boot sequence
-ifeq ($(LGE_MSM7X27A_GENERATION),2)
-  ifeq ($(HOST_OS),linux)
-    ifeq ($(WITH_DEXPREOPT),)
-        WITH_DEXPREOPT := true
-    endif
+ifeq ($(HOST_OS),linux)
+  ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
   endif
 endif
 
@@ -32,8 +30,5 @@ EXTENDED_FONT_FOOTPRINT := true
 # BIONIC: use legacy mmap
 BOARD_USES_LEGACY_MMAP := true
 
-# Only Interpret the system apps due to low space partitions
-ifeq ($(LGE_MSM7X27A_GENERATION),1)
-  PRODUCT_DEX_PREOPT_DEFAULT_FLAGS := --compiler-filter=interpret-only
-  $(call add-product-dex-preopt-module-config,services,--compiler-filter=space)
-endif
+PRODUCT_DEX_PREOPT_DEFAULT_FLAGS := --compiler-filter=interpret-only
+$(call add-product-dex-preopt-module-config,services,--compiler-filter=space)

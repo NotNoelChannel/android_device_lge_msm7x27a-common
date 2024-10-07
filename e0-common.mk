@@ -16,7 +16,7 @@
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Device specific overlays
-DEVICE_PACKAGE_OVERLAYS += device/lge/$(LGE_MSM7X27A_DEVICE)/overlay
+DEVICE_PACKAGE_OVERLAYS += device/lge/e0/overlay
 
 # Product common configurations
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)

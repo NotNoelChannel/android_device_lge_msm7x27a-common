@@ -4,4 +4,4 @@ PRODUCT_COPY_FILES += \
 
 # Media device configurations
 PRODUCT_COPY_FILES += \
-    device/lge/msm7x27a-common/rootdir/system/etc/media_profiles_gen$(LGE_MSM7X27A_GENERATION).xml:system/etc/media_profiles.xml
+    device/lge/msm7x27a-common/rootdir/system/etc/media_profiles.xml:system/etc/media_profiles.xml
