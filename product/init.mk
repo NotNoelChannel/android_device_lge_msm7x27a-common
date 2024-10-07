@@ -1,7 +1,7 @@
 # Init common configurations
 PRODUCT_COPY_FILES += \
-    device/lge/msm7x27a-common/rootdir/root/init.lge.shared.rc:root/init.lge.shared.rc \
-    device/lge/msm7x27a-common/rootdir/root/init.lge.usb.rc:root/init.lge.usb.rc
+    device/lge/e0-common/rootdir/root/init.lge.shared.rc:root/init.lge.shared.rc \
+    device/lge/e0-common/rootdir/root/init.lge.usb.rc:root/init.lge.usb.rc
 
 # Init device configurations
 PRODUCT_COPY_FILES += \
